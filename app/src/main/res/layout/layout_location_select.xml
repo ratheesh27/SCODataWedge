@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_common"
+    android:layout_width="match_parent"
+    android:layout_margin="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/colorRed"
+        android:text="Please Select Location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:textColor="@color/black"
+        android:id="@+id/tvScroll"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" >
+
+        <AutoCompleteTextView
+            android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+            android:padding="14dp"
+            android:background="@drawable/round_corner_et"
+            android:id="@+id/autoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Location"/>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScroll">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginEnd="5dp"
+            android:id="@+id/btnCancel"
+            style="@style/ExtendedButtonRound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginStart="5dp"
+            android:id="@+id/btnOk"
+            style="@style/ExtendedButtonRound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

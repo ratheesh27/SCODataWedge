@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/linearLayout"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvNo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/text_dark_color"
+        tools:text="@string/upc" />
+
+
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/mns_dark_color" />
+
+    <TextView
+        android:id="@+id/tvQty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".2"
+        android:gravity="center"
+        android:padding="@dimen/spacing_tiny"
+        android:textColor="@color/text_dark_color"
+        tools:text="Aln" />
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!--
+    <androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_tiny"
+    android:layout_marginStart="@dimen/spacing_small"
+    android:layout_marginEnd="@dimen/spacing_small"
+    android:layout_marginBottom="@dimen/spacing_small"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small">
+
+        <View
+            android:id="@+id/margin"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/colorRed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#f7f5f5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/margin"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/upc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_size_small"
+                android:padding="@dimen/spacing_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="UPC/EAN: 1234567890," />
+
+            <TextView
+                android:id="@+id/expected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/upc"
+                app:layout_constraintStart_toEndOf="@+id/upc"
+                tools:text="Expected 123," />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:id="@+id/middleLayout"
+            app:layout_constraintStart_toEndOf="@+id/margin"
+            android:padding="@dimen/spacing_small"
+            android:background="#fafaff"
+            app:layout_constraintTop_toBottomOf="@+id/topLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/scanned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="Scanned 22," />
+
+            <TextView
+                android:id="@+id/shortage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_size_small"
+                app:layout_constraintBaseline_toBaselineOf="@+id/scanned"
+                app:layout_constraintStart_toEndOf="@+id/scanned"
+                tools:text="Shortage 83" />
+
+            <TextView
+                android:id="@+id/excess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small"
+                app:layout_constraintBaseline_toBaselineOf="@+id/scanned"
+                app:layout_constraintStart_toEndOf="@+id/shortage"
+                tools:text="Excess 11" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            app:layout_constraintStart_toEndOf="@+id/margin"
+            app:layout_constraintTop_toBottomOf="@id/middleLayout"
+            android:padding="@dimen/spacing_small"
+            android:background="#f7f7f7"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/alien"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/teal_700"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:textSize="@dimen/text_size_small"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Alien/Mismatch 7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>-->
